@@ -3,6 +3,6 @@ prefix=/home/ys/mini_multi_agent/devel
 Name: system_package
 Description: Description of system_package
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/ys/mini_multi_agent/devel/include
 Libs: -L/home/ys/mini_multi_agent/devel/lib 
 Requires: 
