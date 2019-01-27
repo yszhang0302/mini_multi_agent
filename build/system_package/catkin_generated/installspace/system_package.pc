@@ -1,0 +1,8 @@
+prefix=/home/ys/mini_multi_agent/install
+
+Name: system_package
+Description: Description of system_package
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/ys/mini_multi_agent/install/lib 
+Requires: 

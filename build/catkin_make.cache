@@ -1,0 +1,2 @@
+system_package
+-DCATKIN_DEVEL_PREFIX=/home/ys/mini_multi_agent/devel -DCMAKE_INSTALL_PREFIX=/home/ys/mini_multi_agent/install -G Unix Makefiles
