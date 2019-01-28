@@ -37,6 +37,13 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_package/srv" TYPE FILE FILES
+    "/home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv"
+    "/home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv"
+    )
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_package/cmake" TYPE FILE FILES "/home/ys/mini_multi_agent/build/system_package/catkin_generated/installspace/system_package-msg-paths.cmake")
 endif()
 

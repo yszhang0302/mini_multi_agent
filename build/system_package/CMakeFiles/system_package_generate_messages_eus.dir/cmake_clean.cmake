@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/system_package_generate_messages_eus"
   "/home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/msg/robot_feedback.l"
+  "/home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/srv/robot_1.l"
+  "/home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/srv/robot_2.l"
   "/home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/manifest.l"
 )
 

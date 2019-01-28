@@ -54,7 +54,10 @@ CMAKE_BINARY_DIR = /home/ys/mini_multi_agent/build
 include system_package/CMakeFiles/system_package_generate_messages_py.dir/progress.make
 
 system_package/CMakeFiles/system_package_generate_messages_py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/msg/_robot_feedback.py
+system_package/CMakeFiles/system_package_generate_messages_py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/_robot_1.py
+system_package/CMakeFiles/system_package_generate_messages_py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/_robot_2.py
 system_package/CMakeFiles/system_package_generate_messages_py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/msg/__init__.py
+system_package/CMakeFiles/system_package_generate_messages_py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/__init__.py
 
 
 /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/msg/_robot_feedback.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
@@ -62,14 +65,36 @@ system_package/CMakeFiles/system_package_generate_messages_py: /home/ys/mini_mul
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ys/mini_multi_agent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG system_package/robot_feedback"
 	cd /home/ys/mini_multi_agent/build/system_package && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ys/mini_multi_agent/src/system_package/msg/robot_feedback.msg -Isystem_package:/home/ys/mini_multi_agent/src/system_package/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p system_package -o /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/msg
 
+/home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/_robot_1.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
+/home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/_robot_1.py: /home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ys/mini_multi_agent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV system_package/robot_1"
+	cd /home/ys/mini_multi_agent/build/system_package && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv -Isystem_package:/home/ys/mini_multi_agent/src/system_package/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p system_package -o /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv
+
+/home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/_robot_2.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
+/home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/_robot_2.py: /home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ys/mini_multi_agent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV system_package/robot_2"
+	cd /home/ys/mini_multi_agent/build/system_package && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv -Isystem_package:/home/ys/mini_multi_agent/src/system_package/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p system_package -o /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv
+
 /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/msg/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
 /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/msg/__init__.py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/msg/_robot_feedback.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ys/mini_multi_agent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for system_package"
+/home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/msg/__init__.py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/_robot_1.py
+/home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/msg/__init__.py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/_robot_2.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ys/mini_multi_agent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for system_package"
 	cd /home/ys/mini_multi_agent/build/system_package && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/msg --initpy
+
+/home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/__init__.py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/msg/_robot_feedback.py
+/home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/__init__.py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/_robot_1.py
+/home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/__init__.py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/_robot_2.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ys/mini_multi_agent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python srv __init__.py for system_package"
+	cd /home/ys/mini_multi_agent/build/system_package && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv --initpy
 
 system_package_generate_messages_py: system_package/CMakeFiles/system_package_generate_messages_py
 system_package_generate_messages_py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/msg/_robot_feedback.py
+system_package_generate_messages_py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/_robot_1.py
+system_package_generate_messages_py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/_robot_2.py
 system_package_generate_messages_py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/msg/__init__.py
+system_package_generate_messages_py: /home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/__init__.py
 system_package_generate_messages_py: system_package/CMakeFiles/system_package_generate_messages_py.dir/build.make
 
 .PHONY : system_package_generate_messages_py

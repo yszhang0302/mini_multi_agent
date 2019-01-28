@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/system_package_generate_messages_py"
   "/home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/msg/_robot_feedback.py"
+  "/home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/_robot_1.py"
+  "/home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/_robot_2.py"
   "/home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/msg/__init__.py"
+  "/home/ys/mini_multi_agent/devel/lib/python2.7/dist-packages/system_package/srv/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/ys/mini_multi_agent/build
 include system_package/CMakeFiles/system_package_generate_messages_eus.dir/progress.make
 
 system_package/CMakeFiles/system_package_generate_messages_eus: /home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/msg/robot_feedback.l
+system_package/CMakeFiles/system_package_generate_messages_eus: /home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/srv/robot_1.l
+system_package/CMakeFiles/system_package_generate_messages_eus: /home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/srv/robot_2.l
 system_package/CMakeFiles/system_package_generate_messages_eus: /home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/manifest.l
 
 
@@ -62,12 +64,24 @@ system_package/CMakeFiles/system_package_generate_messages_eus: /home/ys/mini_mu
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ys/mini_multi_agent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from system_package/robot_feedback.msg"
 	cd /home/ys/mini_multi_agent/build/system_package && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ys/mini_multi_agent/src/system_package/msg/robot_feedback.msg -Isystem_package:/home/ys/mini_multi_agent/src/system_package/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p system_package -o /home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/msg
 
+/home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/srv/robot_1.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/srv/robot_1.l: /home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ys/mini_multi_agent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from system_package/robot_1.srv"
+	cd /home/ys/mini_multi_agent/build/system_package && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv -Isystem_package:/home/ys/mini_multi_agent/src/system_package/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p system_package -o /home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/srv
+
+/home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/srv/robot_2.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/srv/robot_2.l: /home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ys/mini_multi_agent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from system_package/robot_2.srv"
+	cd /home/ys/mini_multi_agent/build/system_package && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv -Isystem_package:/home/ys/mini_multi_agent/src/system_package/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p system_package -o /home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/srv
+
 /home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ys/mini_multi_agent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for system_package"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ys/mini_multi_agent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp manifest code for system_package"
 	cd /home/ys/mini_multi_agent/build/system_package && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/ys/mini_multi_agent/devel/share/roseus/ros/system_package system_package std_msgs
 
 system_package_generate_messages_eus: system_package/CMakeFiles/system_package_generate_messages_eus
 system_package_generate_messages_eus: /home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/msg/robot_feedback.l
+system_package_generate_messages_eus: /home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/srv/robot_1.l
+system_package_generate_messages_eus: /home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/srv/robot_2.l
 system_package_generate_messages_eus: /home/ys/mini_multi_agent/devel/share/roseus/ros/system_package/manifest.l
 system_package_generate_messages_eus: system_package/CMakeFiles/system_package_generate_messages_eus.dir/build.make
 
