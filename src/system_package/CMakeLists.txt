@@ -112,8 +112,8 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
-# ${catkin_INCLUDE_DIRS}
+ include
+ ${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -145,6 +145,14 @@ include_directories(
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
+
+add_executable(node_robot_1 src/node_robot_1.cpp)
+target_link_libraries(node_robot_1 ${catkin_LIBRARIES})
+add_dependencies(node_robot_1 system_package_gencpp)
+
+add_executable(node_robot_2 src/node_robot_2.cpp)
+target_link_libraries(node_robot_2 ${catkin_LIBRARIES})
+add_dependencies(node_robot_2 system_package_gencpp)
 
 #############
 ## Install ##

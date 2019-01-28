@@ -283,6 +283,19 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named node_robot_2
+
+# Build rule for target.
+node_robot_2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_robot_2
+.PHONY : node_robot_2
+
+# fast build rule for target.
+node_robot_2/fast:
+	$(MAKE) -f system_package/CMakeFiles/node_robot_2.dir/build.make system_package/CMakeFiles/node_robot_2.dir/build
+.PHONY : node_robot_2/fast
+
+#=============================================================================
 # Target rules for targets named system_package_genpy
 
 # Build rule for target.
@@ -346,6 +359,19 @@ std_msgs_generate_messages_py: cmake_check_build_system
 std_msgs_generate_messages_py/fast:
 	$(MAKE) -f system_package/CMakeFiles/std_msgs_generate_messages_py.dir/build.make system_package/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named node_robot_1
+
+# Build rule for target.
+node_robot_1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_robot_1
+.PHONY : node_robot_1
+
+# fast build rule for target.
+node_robot_1/fast:
+	$(MAKE) -f system_package/CMakeFiles/node_robot_1.dir/build.make system_package/CMakeFiles/node_robot_1.dir/build
+.PHONY : node_robot_1/fast
 
 #=============================================================================
 # Target rules for targets named _system_package_generate_messages_check_deps_robot_feedback
@@ -681,11 +707,13 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... node_robot_2"
 	@echo "... system_package_genpy"
 	@echo "... system_package_generate_messages_py"
 	@echo "... system_package_genlisp"
 	@echo "... system_package_geneus"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... node_robot_1"
 	@echo "... _system_package_generate_messages_check_deps_robot_feedback"
 	@echo "... system_package_gennodejs"
 	@echo "... roscpp_generate_messages_py"

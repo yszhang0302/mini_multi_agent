@@ -29,9 +29,10 @@
 /home/ys/mini_multi_agent/build/gtest/gtest/CMakeFiles/install/strip.dir
 /home/ys/mini_multi_agent/build/gtest/gtest/CMakeFiles/install/local.dir
 /home/ys/mini_multi_agent/build/system_package/CMakeFiles/list_install_components.dir
-/home/ys/mini_multi_agent/build/system_package/CMakeFiles/install.dir
 /home/ys/mini_multi_agent/build/system_package/CMakeFiles/test.dir
 /home/ys/mini_multi_agent/build/system_package/CMakeFiles/install/strip.dir
+/home/ys/mini_multi_agent/build/system_package/CMakeFiles/install.dir
+/home/ys/mini_multi_agent/build/system_package/CMakeFiles/node_robot_2.dir
 /home/ys/mini_multi_agent/build/system_package/CMakeFiles/edit_cache.dir
 /home/ys/mini_multi_agent/build/system_package/CMakeFiles/system_package_genpy.dir
 /home/ys/mini_multi_agent/build/system_package/CMakeFiles/system_package_generate_messages_py.dir
@@ -40,6 +41,7 @@
 /home/ys/mini_multi_agent/build/system_package/CMakeFiles/system_package_geneus.dir
 /home/ys/mini_multi_agent/build/system_package/CMakeFiles/std_msgs_generate_messages_py.dir
 /home/ys/mini_multi_agent/build/system_package/CMakeFiles/install/local.dir
+/home/ys/mini_multi_agent/build/system_package/CMakeFiles/node_robot_1.dir
 /home/ys/mini_multi_agent/build/system_package/CMakeFiles/_system_package_generate_messages_check_deps_robot_feedback.dir
 /home/ys/mini_multi_agent/build/system_package/CMakeFiles/system_package_gennodejs.dir
 /home/ys/mini_multi_agent/build/system_package/CMakeFiles/roscpp_generate_messages_py.dir
