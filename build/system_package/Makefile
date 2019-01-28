@@ -66,18 +66,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -99,6 +87,18 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -164,6 +164,21 @@ preinstall/fast:
 depend:
 	cd /home/ys/mini_multi_agent/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+system_package/CMakeFiles/node_robot_2.dir/rule:
+	cd /home/ys/mini_multi_agent/build && $(MAKE) -f CMakeFiles/Makefile2 system_package/CMakeFiles/node_robot_2.dir/rule
+.PHONY : system_package/CMakeFiles/node_robot_2.dir/rule
+
+# Convenience name for target.
+node_robot_2: system_package/CMakeFiles/node_robot_2.dir/rule
+
+.PHONY : node_robot_2
+
+# fast build rule for target.
+node_robot_2/fast:
+	cd /home/ys/mini_multi_agent/build && $(MAKE) -f system_package/CMakeFiles/node_robot_2.dir/build.make system_package/CMakeFiles/node_robot_2.dir/build
+.PHONY : node_robot_2/fast
 
 # Convenience name for target.
 system_package/CMakeFiles/system_package_genpy.dir/rule:
@@ -239,6 +254,21 @@ std_msgs_generate_messages_py: system_package/CMakeFiles/std_msgs_generate_messa
 std_msgs_generate_messages_py/fast:
 	cd /home/ys/mini_multi_agent/build && $(MAKE) -f system_package/CMakeFiles/std_msgs_generate_messages_py.dir/build.make system_package/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+system_package/CMakeFiles/node_robot_1.dir/rule:
+	cd /home/ys/mini_multi_agent/build && $(MAKE) -f CMakeFiles/Makefile2 system_package/CMakeFiles/node_robot_1.dir/rule
+.PHONY : system_package/CMakeFiles/node_robot_1.dir/rule
+
+# Convenience name for target.
+node_robot_1: system_package/CMakeFiles/node_robot_1.dir/rule
+
+.PHONY : node_robot_1
+
+# fast build rule for target.
+node_robot_1/fast:
+	cd /home/ys/mini_multi_agent/build && $(MAKE) -f system_package/CMakeFiles/node_robot_1.dir/build.make system_package/CMakeFiles/node_robot_1.dir/build
+.PHONY : node_robot_1/fast
 
 # Convenience name for target.
 system_package/CMakeFiles/_system_package_generate_messages_check_deps_robot_feedback.dir/rule:
@@ -600,6 +630,60 @@ system_package_generate_messages_eus/fast:
 	cd /home/ys/mini_multi_agent/build && $(MAKE) -f system_package/CMakeFiles/system_package_generate_messages_eus.dir/build.make system_package/CMakeFiles/system_package_generate_messages_eus.dir/build
 .PHONY : system_package_generate_messages_eus/fast
 
+src/node_robot_1.o: src/node_robot_1.cpp.o
+
+.PHONY : src/node_robot_1.o
+
+# target to build an object file
+src/node_robot_1.cpp.o:
+	cd /home/ys/mini_multi_agent/build && $(MAKE) -f system_package/CMakeFiles/node_robot_1.dir/build.make system_package/CMakeFiles/node_robot_1.dir/src/node_robot_1.cpp.o
+.PHONY : src/node_robot_1.cpp.o
+
+src/node_robot_1.i: src/node_robot_1.cpp.i
+
+.PHONY : src/node_robot_1.i
+
+# target to preprocess a source file
+src/node_robot_1.cpp.i:
+	cd /home/ys/mini_multi_agent/build && $(MAKE) -f system_package/CMakeFiles/node_robot_1.dir/build.make system_package/CMakeFiles/node_robot_1.dir/src/node_robot_1.cpp.i
+.PHONY : src/node_robot_1.cpp.i
+
+src/node_robot_1.s: src/node_robot_1.cpp.s
+
+.PHONY : src/node_robot_1.s
+
+# target to generate assembly for a file
+src/node_robot_1.cpp.s:
+	cd /home/ys/mini_multi_agent/build && $(MAKE) -f system_package/CMakeFiles/node_robot_1.dir/build.make system_package/CMakeFiles/node_robot_1.dir/src/node_robot_1.cpp.s
+.PHONY : src/node_robot_1.cpp.s
+
+src/node_robot_2.o: src/node_robot_2.cpp.o
+
+.PHONY : src/node_robot_2.o
+
+# target to build an object file
+src/node_robot_2.cpp.o:
+	cd /home/ys/mini_multi_agent/build && $(MAKE) -f system_package/CMakeFiles/node_robot_2.dir/build.make system_package/CMakeFiles/node_robot_2.dir/src/node_robot_2.cpp.o
+.PHONY : src/node_robot_2.cpp.o
+
+src/node_robot_2.i: src/node_robot_2.cpp.i
+
+.PHONY : src/node_robot_2.i
+
+# target to preprocess a source file
+src/node_robot_2.cpp.i:
+	cd /home/ys/mini_multi_agent/build && $(MAKE) -f system_package/CMakeFiles/node_robot_2.dir/build.make system_package/CMakeFiles/node_robot_2.dir/src/node_robot_2.cpp.i
+.PHONY : src/node_robot_2.cpp.i
+
+src/node_robot_2.s: src/node_robot_2.cpp.s
+
+.PHONY : src/node_robot_2.s
+
+# target to generate assembly for a file
+src/node_robot_2.cpp.s:
+	cd /home/ys/mini_multi_agent/build && $(MAKE) -f system_package/CMakeFiles/node_robot_2.dir/build.make system_package/CMakeFiles/node_robot_2.dir/src/node_robot_2.cpp.s
+.PHONY : src/node_robot_2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -607,9 +691,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... list_install_components"
-	@echo "... install"
 	@echo "... test"
 	@echo "... install/strip"
+	@echo "... install"
+	@echo "... node_robot_2"
 	@echo "... edit_cache"
 	@echo "... system_package_genpy"
 	@echo "... system_package_generate_messages_py"
@@ -618,6 +703,7 @@ help:
 	@echo "... system_package_geneus"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... install/local"
+	@echo "... node_robot_1"
 	@echo "... _system_package_generate_messages_check_deps_robot_feedback"
 	@echo "... system_package_gennodejs"
 	@echo "... roscpp_generate_messages_py"
@@ -642,6 +728,12 @@ help:
 	@echo "... system_package_generate_messages"
 	@echo "... _system_package_generate_messages_check_deps_robot_2"
 	@echo "... system_package_generate_messages_eus"
+	@echo "... src/node_robot_1.o"
+	@echo "... src/node_robot_1.i"
+	@echo "... src/node_robot_1.s"
+	@echo "... src/node_robot_2.o"
+	@echo "... src/node_robot_2.i"
+	@echo "... src/node_robot_2.s"
 .PHONY : help
 
 
