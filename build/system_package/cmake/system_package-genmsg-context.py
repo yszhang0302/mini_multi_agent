@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = "/home/ys/mini_multi_agent/src/system_package/msg/robot_feedback.msg"
-services_str = ""
+services_str = "/home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv;/home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv"
 pkg_name = "system_package"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

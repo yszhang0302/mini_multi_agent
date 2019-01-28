@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "system_package: 1 messages, 0 services")
+message(STATUS "system_package: 1 messages, 2 services")
 
 set(MSG_I_FLAGS "-Isystem_package:/home/ys/mini_multi_agent/src/system_package/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
@@ -22,6 +22,16 @@ add_custom_target(_system_package_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "system_package" "/home/ys/mini_multi_agent/src/system_package/msg/robot_feedback.msg" ""
 )
 
+get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv" NAME_WE)
+add_custom_target(_system_package_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "system_package" "/home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv" ""
+)
+
+get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv" NAME_WE)
+add_custom_target(_system_package_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "system_package" "/home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -36,6 +46,18 @@ _generate_msg_cpp(system_package
 )
 
 ### Generating Services
+_generate_srv_cpp(system_package
+  "/home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/system_package
+)
+_generate_srv_cpp(system_package
+  "/home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/system_package
+)
 
 ### Generating Module File
 _generate_module_cpp(system_package
@@ -50,6 +72,10 @@ add_dependencies(system_package_generate_messages system_package_generate_messag
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/msg/robot_feedback.msg" NAME_WE)
+add_dependencies(system_package_generate_messages_cpp _system_package_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv" NAME_WE)
+add_dependencies(system_package_generate_messages_cpp _system_package_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv" NAME_WE)
 add_dependencies(system_package_generate_messages_cpp _system_package_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -69,6 +95,18 @@ _generate_msg_eus(system_package
 )
 
 ### Generating Services
+_generate_srv_eus(system_package
+  "/home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/system_package
+)
+_generate_srv_eus(system_package
+  "/home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/system_package
+)
 
 ### Generating Module File
 _generate_module_eus(system_package
@@ -83,6 +121,10 @@ add_dependencies(system_package_generate_messages system_package_generate_messag
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/msg/robot_feedback.msg" NAME_WE)
+add_dependencies(system_package_generate_messages_eus _system_package_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv" NAME_WE)
+add_dependencies(system_package_generate_messages_eus _system_package_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv" NAME_WE)
 add_dependencies(system_package_generate_messages_eus _system_package_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -102,6 +144,18 @@ _generate_msg_lisp(system_package
 )
 
 ### Generating Services
+_generate_srv_lisp(system_package
+  "/home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/system_package
+)
+_generate_srv_lisp(system_package
+  "/home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/system_package
+)
 
 ### Generating Module File
 _generate_module_lisp(system_package
@@ -116,6 +170,10 @@ add_dependencies(system_package_generate_messages system_package_generate_messag
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/msg/robot_feedback.msg" NAME_WE)
+add_dependencies(system_package_generate_messages_lisp _system_package_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv" NAME_WE)
+add_dependencies(system_package_generate_messages_lisp _system_package_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv" NAME_WE)
 add_dependencies(system_package_generate_messages_lisp _system_package_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -135,6 +193,18 @@ _generate_msg_nodejs(system_package
 )
 
 ### Generating Services
+_generate_srv_nodejs(system_package
+  "/home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/system_package
+)
+_generate_srv_nodejs(system_package
+  "/home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/system_package
+)
 
 ### Generating Module File
 _generate_module_nodejs(system_package
@@ -149,6 +219,10 @@ add_dependencies(system_package_generate_messages system_package_generate_messag
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/msg/robot_feedback.msg" NAME_WE)
+add_dependencies(system_package_generate_messages_nodejs _system_package_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv" NAME_WE)
+add_dependencies(system_package_generate_messages_nodejs _system_package_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv" NAME_WE)
 add_dependencies(system_package_generate_messages_nodejs _system_package_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -168,6 +242,18 @@ _generate_msg_py(system_package
 )
 
 ### Generating Services
+_generate_srv_py(system_package
+  "/home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/system_package
+)
+_generate_srv_py(system_package
+  "/home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/system_package
+)
 
 ### Generating Module File
 _generate_module_py(system_package
@@ -182,6 +268,10 @@ add_dependencies(system_package_generate_messages system_package_generate_messag
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/msg/robot_feedback.msg" NAME_WE)
+add_dependencies(system_package_generate_messages_py _system_package_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv" NAME_WE)
+add_dependencies(system_package_generate_messages_py _system_package_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv" NAME_WE)
 add_dependencies(system_package_generate_messages_py _system_package_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

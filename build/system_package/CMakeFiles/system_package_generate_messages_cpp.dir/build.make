@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/ys/mini_multi_agent/build
 include system_package/CMakeFiles/system_package_generate_messages_cpp.dir/progress.make
 
 system_package/CMakeFiles/system_package_generate_messages_cpp: /home/ys/mini_multi_agent/devel/include/system_package/robot_feedback.h
+system_package/CMakeFiles/system_package_generate_messages_cpp: /home/ys/mini_multi_agent/devel/include/system_package/robot_1.h
+system_package/CMakeFiles/system_package_generate_messages_cpp: /home/ys/mini_multi_agent/devel/include/system_package/robot_2.h
 
 
 /home/ys/mini_multi_agent/devel/include/system_package/robot_feedback.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
@@ -62,8 +64,24 @@ system_package/CMakeFiles/system_package_generate_messages_cpp: /home/ys/mini_mu
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ys/mini_multi_agent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from system_package/robot_feedback.msg"
 	cd /home/ys/mini_multi_agent/src/system_package && /home/ys/mini_multi_agent/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ys/mini_multi_agent/src/system_package/msg/robot_feedback.msg -Isystem_package:/home/ys/mini_multi_agent/src/system_package/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p system_package -o /home/ys/mini_multi_agent/devel/include/system_package -e /opt/ros/kinetic/share/gencpp/cmake/..
 
+/home/ys/mini_multi_agent/devel/include/system_package/robot_1.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/ys/mini_multi_agent/devel/include/system_package/robot_1.h: /home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv
+/home/ys/mini_multi_agent/devel/include/system_package/robot_1.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/ys/mini_multi_agent/devel/include/system_package/robot_1.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ys/mini_multi_agent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from system_package/robot_1.srv"
+	cd /home/ys/mini_multi_agent/src/system_package && /home/ys/mini_multi_agent/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ys/mini_multi_agent/src/system_package/srv/robot_1.srv -Isystem_package:/home/ys/mini_multi_agent/src/system_package/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p system_package -o /home/ys/mini_multi_agent/devel/include/system_package -e /opt/ros/kinetic/share/gencpp/cmake/..
+
+/home/ys/mini_multi_agent/devel/include/system_package/robot_2.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/ys/mini_multi_agent/devel/include/system_package/robot_2.h: /home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv
+/home/ys/mini_multi_agent/devel/include/system_package/robot_2.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/ys/mini_multi_agent/devel/include/system_package/robot_2.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ys/mini_multi_agent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from system_package/robot_2.srv"
+	cd /home/ys/mini_multi_agent/src/system_package && /home/ys/mini_multi_agent/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ys/mini_multi_agent/src/system_package/srv/robot_2.srv -Isystem_package:/home/ys/mini_multi_agent/src/system_package/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p system_package -o /home/ys/mini_multi_agent/devel/include/system_package -e /opt/ros/kinetic/share/gencpp/cmake/..
+
 system_package_generate_messages_cpp: system_package/CMakeFiles/system_package_generate_messages_cpp
 system_package_generate_messages_cpp: /home/ys/mini_multi_agent/devel/include/system_package/robot_feedback.h
+system_package_generate_messages_cpp: /home/ys/mini_multi_agent/devel/include/system_package/robot_1.h
+system_package_generate_messages_cpp: /home/ys/mini_multi_agent/devel/include/system_package/robot_2.h
 system_package_generate_messages_cpp: system_package/CMakeFiles/system_package_generate_messages_cpp.dir/build.make
 
 .PHONY : system_package_generate_messages_cpp

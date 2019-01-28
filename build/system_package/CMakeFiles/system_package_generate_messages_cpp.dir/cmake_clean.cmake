@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/system_package_generate_messages_cpp"
   "/home/ys/mini_multi_agent/devel/include/system_package/robot_feedback.h"
+  "/home/ys/mini_multi_agent/devel/include/system_package/robot_1.h"
+  "/home/ys/mini_multi_agent/devel/include/system_package/robot_2.h"
 )
 
 # Per-language clean rules from dependency scanning.
