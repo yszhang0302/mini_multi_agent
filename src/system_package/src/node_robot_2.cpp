@@ -2,53 +2,77 @@
 #include "system_package/robot_feedback.h"//msg
 #include "system_package/robot_2.h"//srv
 #include <string>
+#include <boost/thread/thread.hpp>
 
-ros::Publisher pub;
 system_package::robot_feedback msg;
+std::string state = "ready";
 
-void timer_callback(const ros::TimerEvent& event)
+void timer_callback(const ros::TimerEvent&)
 {
     ROS_INFO("node_robot_2 finished current task");
+    printf("node_robot_2 finished current task\n");
+    state = "ready";
+}
 
-    msg.robot_id = 2;
-    msg.robot_state = "ready";
-    pub.publish(msg);
-    ROS_INFO("node_robot_2 is publishing msg:%d,%s",msg.robot_id,msg.robot_state.c_str());
+void function_timer(void)
+{
+    ros::NodeHandle nh;
+    ros::Timer timer = nh.createTimer(ros::Duration(3.0),timer_callback);
+    ROS_INFO("node_robot_2 is timing 3s for current task");
+    printf("node_robot_2 is timing 3s for current task\n");
+    ros::AsyncSpinner spinner(0);
+    spinner.start();
+    ros::waitForShutdown();
 }
 
 bool task_recv_process(system_package::robot_2::Request &req,system_package::robot_2::Response &res)
 {
     res.task_state = "executing";
     ROS_INFO("request to robot_2:task_id=%d",req.task_id);
+    printf("request to robot_2:task_id=%d\n",req.task_id);
     ROS_INFO("sending back response from robot_2:%s",res.task_state.c_str());
+    printf("sending back response from robot_2:%s\n",res.task_state.c_str());
 
-    msg.robot_id = 2;
-    msg.robot_state = "executing";
-    pub.publish(msg);
-    ROS_INFO("node_robot_2 is publishing msg:%d,%s",msg.robot_id,msg.robot_state.c_str());
+    state = "executing";
 
-    ros::NodeHandle nh;
-    ros::Timer timer = nh.createTimer(ros::Duration(3.0),timer_callback);
-    ROS_INFO("node_robot_2 is timing 3s for task_id:%d",req.task_id);
+    boost::thread thread_timer(function_timer);
+    ROS_INFO("node_robot_2 is executing task_id:%d",req.task_id);
+    printf("node_robot_2 is executing task_id:%d\n",req.task_id);
 
     return true;
+}
+
+void function_publish(void)
+{
+    ros::NodeHandlePtr node = boost::make_shared<ros::NodeHandle>();
+    ros::Publisher pub = node->advertise<system_package::robot_feedback>("agent_feedback",10);
+    ros::Rate loop_rate(5);
+
+    while (ros::ok())
+    {
+        msg.robot_id = 2;
+        msg.robot_state = state;
+        pub.publish(msg);
+        ROS_INFO("node_robot_2 is publishing msg:(%d,%s)",msg.robot_id,msg.robot_state.c_str());
+        printf("node_robot_2 is publishing msg:(%d,%s)\n",msg.robot_id,msg.robot_state.c_str());
+
+        loop_rate.sleep();
+    }
 }
 
 int main(int argc,char **argv)
 {
     ros::init(argc,argv,"node_robot_2");
-   
-    ros::NodeHandle nh;
-    pub = nh.advertise<system_package::robot_feedback>("agent_feedback",1000);
-    msg.robot_id = 2;
-    msg.robot_state = "ready";
-    pub.publish(msg);
-    ROS_INFO("node_robot_2 is publishing msg:%d,%s",msg.robot_id,msg.robot_state.c_str());
 
+    boost::thread thread_publish(function_publish);
+  
+    ros::NodeHandle nh;
     ros::ServiceServer service = nh.advertiseService("agent_task_2",task_recv_process);
     ROS_INFO("node_robot_2 is ready to receive task");
+    printf("node_robot_2 is ready to receive task\n");
     ros::spin();
-       
+ 
+    thread_publish.join();
     return 0;
 }
 
