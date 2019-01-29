@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+        <node name = "node_robot_1" pkg = "system_package" type = "node_robot_1" output = "screen"/>
+        <node name = "node_robot_2" pkg = "system_package" type = "node_robot_2" output = "screen"/>
+        <node name = "node_mini_factory_server" pkg = "system_package" type = "node_mini_factory_server" output = "screen"/>
+</launch>

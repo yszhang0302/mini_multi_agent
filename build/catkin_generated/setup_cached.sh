@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/ys/mini_multi_agent/build"
+export PWD="/home/ys/xxx/mini_multi_agent/build"
