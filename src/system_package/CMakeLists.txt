@@ -154,6 +154,10 @@ add_executable(node_robot_2 src/node_robot_2.cpp)
 target_link_libraries(node_robot_2 ${catkin_LIBRARIES})
 add_dependencies(node_robot_2 system_package_gencpp)
 
+add_executable(node_mini_factory_server src/node_mini_factory_server.cpp)
+target_link_libraries(node_mini_factory_server ${catkin_LIBRARIES})
+add_dependencies(node_mini_factory_server system_package_gencpp)
+
 #############
 ## Install ##
 #############

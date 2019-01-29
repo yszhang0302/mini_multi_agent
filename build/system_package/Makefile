@@ -556,6 +556,21 @@ system_package_gencpp/fast:
 .PHONY : system_package_gencpp/fast
 
 # Convenience name for target.
+system_package/CMakeFiles/node_mini_factory_server.dir/rule:
+	cd /home/ys/mini_multi_agent/build && $(MAKE) -f CMakeFiles/Makefile2 system_package/CMakeFiles/node_mini_factory_server.dir/rule
+.PHONY : system_package/CMakeFiles/node_mini_factory_server.dir/rule
+
+# Convenience name for target.
+node_mini_factory_server: system_package/CMakeFiles/node_mini_factory_server.dir/rule
+
+.PHONY : node_mini_factory_server
+
+# fast build rule for target.
+node_mini_factory_server/fast:
+	cd /home/ys/mini_multi_agent/build && $(MAKE) -f system_package/CMakeFiles/node_mini_factory_server.dir/build.make system_package/CMakeFiles/node_mini_factory_server.dir/build
+.PHONY : node_mini_factory_server/fast
+
+# Convenience name for target.
 system_package/CMakeFiles/_system_package_generate_messages_check_deps_robot_1.dir/rule:
 	cd /home/ys/mini_multi_agent/build && $(MAKE) -f CMakeFiles/Makefile2 system_package/CMakeFiles/_system_package_generate_messages_check_deps_robot_1.dir/rule
 .PHONY : system_package/CMakeFiles/_system_package_generate_messages_check_deps_robot_1.dir/rule
@@ -629,6 +644,33 @@ system_package_generate_messages_eus: system_package/CMakeFiles/system_package_g
 system_package_generate_messages_eus/fast:
 	cd /home/ys/mini_multi_agent/build && $(MAKE) -f system_package/CMakeFiles/system_package_generate_messages_eus.dir/build.make system_package/CMakeFiles/system_package_generate_messages_eus.dir/build
 .PHONY : system_package_generate_messages_eus/fast
+
+src/node_mini_factory_server.o: src/node_mini_factory_server.cpp.o
+
+.PHONY : src/node_mini_factory_server.o
+
+# target to build an object file
+src/node_mini_factory_server.cpp.o:
+	cd /home/ys/mini_multi_agent/build && $(MAKE) -f system_package/CMakeFiles/node_mini_factory_server.dir/build.make system_package/CMakeFiles/node_mini_factory_server.dir/src/node_mini_factory_server.cpp.o
+.PHONY : src/node_mini_factory_server.cpp.o
+
+src/node_mini_factory_server.i: src/node_mini_factory_server.cpp.i
+
+.PHONY : src/node_mini_factory_server.i
+
+# target to preprocess a source file
+src/node_mini_factory_server.cpp.i:
+	cd /home/ys/mini_multi_agent/build && $(MAKE) -f system_package/CMakeFiles/node_mini_factory_server.dir/build.make system_package/CMakeFiles/node_mini_factory_server.dir/src/node_mini_factory_server.cpp.i
+.PHONY : src/node_mini_factory_server.cpp.i
+
+src/node_mini_factory_server.s: src/node_mini_factory_server.cpp.s
+
+.PHONY : src/node_mini_factory_server.s
+
+# target to generate assembly for a file
+src/node_mini_factory_server.cpp.s:
+	cd /home/ys/mini_multi_agent/build && $(MAKE) -f system_package/CMakeFiles/node_mini_factory_server.dir/build.make system_package/CMakeFiles/node_mini_factory_server.dir/src/node_mini_factory_server.cpp.s
+.PHONY : src/node_mini_factory_server.cpp.s
 
 src/node_robot_1.o: src/node_robot_1.cpp.o
 
@@ -723,11 +765,15 @@ help:
 	@echo "... system_package_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... system_package_gencpp"
+	@echo "... node_mini_factory_server"
 	@echo "... _system_package_generate_messages_check_deps_robot_1"
 	@echo "... system_package_generate_messages_lisp"
 	@echo "... system_package_generate_messages"
 	@echo "... _system_package_generate_messages_check_deps_robot_2"
 	@echo "... system_package_generate_messages_eus"
+	@echo "... src/node_mini_factory_server.o"
+	@echo "... src/node_mini_factory_server.i"
+	@echo "... src/node_mini_factory_server.s"
 	@echo "... src/node_robot_1.o"
 	@echo "... src/node_robot_1.i"
 	@echo "... src/node_robot_1.s"

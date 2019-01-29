@@ -621,6 +621,19 @@ system_package_gencpp/fast:
 .PHONY : system_package_gencpp/fast
 
 #=============================================================================
+# Target rules for targets named node_mini_factory_server
+
+# Build rule for target.
+node_mini_factory_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_mini_factory_server
+.PHONY : node_mini_factory_server
+
+# fast build rule for target.
+node_mini_factory_server/fast:
+	$(MAKE) -f system_package/CMakeFiles/node_mini_factory_server.dir/build.make system_package/CMakeFiles/node_mini_factory_server.dir/build
+.PHONY : node_mini_factory_server/fast
+
+#=============================================================================
 # Target rules for targets named _system_package_generate_messages_check_deps_robot_1
 
 # Build rule for target.
@@ -733,6 +746,7 @@ help:
 	@echo "... system_package_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... system_package_gencpp"
+	@echo "... node_mini_factory_server"
 	@echo "... _system_package_generate_messages_check_deps_robot_1"
 	@echo "... system_package_generate_messages_lisp"
 	@echo "... system_package_generate_messages"

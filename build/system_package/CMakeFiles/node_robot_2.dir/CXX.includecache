@@ -71,6 +71,8 @@ system_package/robot_2.h
 /home/ys/mini_multi_agent/src/system_package/src/system_package/robot_2.h
 string
 -
+boost/thread/thread.hpp
+-
 
 /opt/ros/kinetic/include/ros/advertise_options.h
 ros/forwards.h
